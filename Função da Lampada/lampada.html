@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função da Lampada</title>
+</head>
+
+<body>
+    <!-- Script para testar Possiveis problemas em uma Lampada -->
+    <script>
+        function testarLampada(msg){
+            var msg = prompt (msg);
+            if (msg == "Sim") {
+                return true
+            }
+            else if (msg == "Não"){
+                return false
+            }
+            else {
+                prompt("Por Favor, escolha Sim ou Não");
+                return 0;
+            }
+        }
+
+        function testeMotivo(lampada, plug, bulbo) {
+            if (lampada == true) {
+                prompt ("Sua lampada não contem defeitos");
+            }
+            else {
+                if (plug == false) {
+                prompt ("Encaixe a lampada");
+                }
+                else if (bulbo == false){
+                    prompt ("É necessário trocar o bulbo");
+                }
+                else {
+                    prompt ("É necessário trocar a lampada");
+                }
+            }    
+        }
+        var Lampada = prompt(testarLampada("A lampada esta funcionando?"));
+        var plug = prompt(testarMotivo("O plug esta funcionando?"));
+        var bulbo = prompt(testarMotivo("O bulbo esta funcionando?"));
+        testarMotivo(Lampada, plug, bulbo);
+        
+    </script>
+</body>
+
+</html>

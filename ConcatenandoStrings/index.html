@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatenando Strings</title>
+</head>
+<body>
+    
+    <script>
+        function pularLinha() {
+            document.write("<br><br>");
+    }
+
+        function mostrar(frase) {
+            pularLinha();
+            document.write(frase);
+            pularLinha();
+        }
+
+        function concatenar(str1, str2) {
+            return (str1 + str2);
+        }
+
+        var str1 = "<center><h1>Olá, </h1><center>";
+        var str2 = "<center><h1>Mundo!</h1><center>";
+
+        mostrra(concatenar(str1,str2));   
+    </script>
+</body>
+</html>

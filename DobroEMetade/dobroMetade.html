@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dobro /</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="nome">
+        <h1>Olá Senhor(a)</h1>
+        <p>Me diga seu nome</p>
+        <input id="inputNome" type="text" placeholder="Nome">
+        <button onclick="saudar()">Enviar</button>
+        <p id="resultaNome">...</p>
+    </div>
+    
+    <div class="dobro">
+        <h1>Digite um Número Legal!</h1>
+        <input id="inputDobro" type="number" placeholder="O dobro dele é">
+        <button onclick="dobrar()">Dobrar</button>    
+        <p id="resultaDobro">...</p>
+    </div>
+    
+    <div class="metade">
+        <h1>Digite um Número Maneiro!</h1>
+        <input id="inputMetade" type="number" placeholder="A metade dele é">
+        <button onclick="dividir()">Cortar ao Meio!</button>    
+        <p id="resultaMetade">...</p>
+    </div>
+
+    <script>
+
+        function Saudacao(nome){
+            return "Olá senhor(a) " + nome + ", tudo bem?"
+        }
+
+        function saudar(){
+
+            var nome = document.getElementById("inputNome").value
+            document.getElementById("resultaNome").innerText = Saudacao(nome)
+        }    
+
+        function calcularDobro(numero){
+            return numero * 2
+        }
+
+        function dobrar(){
+
+            var numero = document.getElementById('inputDobro').value;
+            document.getElementById('resultaDobro').innerText = calcularDobro(numero)
+        }
+
+        function calcularMetade(numero){
+            return numero / 2
+        }
+
+        function cortarMeio(){
+
+            var numero = document.getElementById('inputMetade').value;
+            document.getElementById('resultaMetade').innerText = calcularMetade(numero)
+        }
+
+    </script>
+</body>
+</html>
